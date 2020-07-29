@@ -1,0 +1,146 @@
+@import "shared";
+@import "./bootstrap.scss";
+$primary: rgb(0, 168, 120);
+
+.team {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	margin: 2rem auto;
+	.team_img {
+		height: 25rem;
+		width: 25rem;
+		transform: skewx(-10deg);
+		overflow: hidden;
+		box-shadow: -1px 1px 8px 2px rgba(122, 122, 122, 1);
+		img {
+			height: 25rem;
+			width: 25rem;
+			transform: skewx(10deg) scale(1.3) translatey(2rem) translateX(1.2rem);
+		}
+	}
+	.team_description {
+		align-self: center;
+		margin-left: 5rem;
+		max-width: 35rem;
+	}
+}
+
+blockquote {
+	position: relative;
+	margin-top: 3rem;
+}
+
+/* -- create the quotation marks -- */
+blockquote:before,
+blockquote:after {
+	font-family: fontawesome;
+	position: absolute;
+	/* -- inside the relative position of blockquote -- */
+	top: 13px;
+	color: #e8e8e8;
+	font-size: 34px;
+}
+blockquote:before {
+	content: "\f10d";
+	margin-right: 13px;
+	right: 100%;
+}
+blockquote:after {
+	content: "\f10e";
+	margin-left: 13px;
+	left: 100%;
+}
+
+#second_team {
+	.team_description {
+		align-self: left;
+		margin-right: 7rem;
+	}
+	.team_img {
+		img {
+			height: 25rem;
+			width: 35rem;
+			transform: skewx(10deg) scale(1.3) translatey(2rem) translateX(-3rem);
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.team {
+		.team_img {
+			height: 15rem;
+			width: 15rem;
+			transform: skewx(-10deg);
+			overflow: hidden;
+			box-shadow: -1px 1px 8px 2px rgba(122, 122, 122, 1);
+			img {
+				height: 15rem;
+				width: 15rem;
+				transform: skewx(10deg) scale(1.3) translatey(1rem);
+			}
+		}
+	}
+	#second_team {
+		.team_img {
+			img {
+				height: 15rem;
+				width: 25rem;
+				transform: skewx(10deg) translatex(-6rem);
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.team {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		h1 {
+			font-size: 3rem !important;
+		}
+		.team_img {
+			border-radius: 50%;
+			height: 20rem;
+			width: 20rem;
+			box-shadow: -1px 1px 8px 2px rgba(122, 122, 122, 1);
+			transform: none;
+			margin: auto !important;
+			img {
+				height: 20rem;
+				width: 20rem;
+				transform: none;
+			}
+		}
+		.team_description {
+			align-self: center;
+			max-width: 35rem;
+			margin: 1rem 0 !important;
+			blockquote {
+				background-color: rgb(235, 235, 235);
+				padding: 0.5rem;
+				border: 2px solid $primary;
+				margin-top: 1rem;
+			}
+		}
+	}
+
+	#second_team {
+		.team_img {
+			transform: none;
+			order: -1;
+			img {
+				transform: none;
+				height: 20rem;
+				width: 30rem;
+			}
+		}
+	}
+
+	blockquote:before,
+	blockquote:after {
+		content: "";
+		margin: 0;
+	}
+}

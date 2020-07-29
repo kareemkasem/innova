@@ -1,0 +1,165 @@
+@import "shared";
+@import "./bootstrap.scss";
+
+main {
+	height: auto;
+}
+
+.main-header {
+	h1 {
+		animation: slide 8s ease-in-out ;
+		animation-iteration-count: 1;
+		background: linear-gradient(
+			90deg,
+			rgba(190, 0, 167, 1) 0%,
+			rgba(253, 29, 29, 1) 50%,
+			rgba(252, 176, 69, 1) 100%
+		);
+		background-clip: text ;
+		-webkit-background-clip: text;
+		-moz-background-clip: text ;
+		color: transparent !important;
+		text-indent: -0.5rem;
+		font-size: 4.5rem;
+		font-weight: 800;
+	}
+}
+
+@keyframes slide {
+	0%{
+		background: linear-gradient(
+			90deg,
+			rgba(190, 0, 167, 1) 0%,
+			rgba(253, 29, 29, 1) 50%,
+			rgba(252, 176, 69, 1) 100%
+		);
+		background-clip: text ;
+		-webkit-background-clip: text;
+		-moz-background-clip: text ;
+	}
+	25% {
+		background: rgba(190, 0, 167, 1);
+		background-clip: text ;
+		-webkit-background-clip: text;
+		-moz-background-clip: text ;
+
+	}
+	50% {
+		background: rgba(253, 29, 29, 1);
+		background-clip: text ;
+		-webkit-background-clip: text;
+		-moz-background-clip: text ;
+
+	}
+	75% {
+		background: rgba(252, 176, 69, 1);
+		background-clip: text ;
+		-webkit-background-clip: text;
+		-moz-background-clip: text ;
+	}
+	100%{
+		background: linear-gradient(
+			90deg,
+			rgba(190, 0, 167, 1) 0%,
+			rgba(253, 29, 29, 1) 50%,
+			rgba(252, 176, 69, 1) 100%
+		);
+		background-clip: text ;
+		-webkit-background-clip: text;
+		-moz-background-clip: text ;
+	}
+}
+
+.slide-container {
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	box-shadow: -1px 1px 8px 2px rgba(122, 122, 122, 1);
+	.mySlides {
+		height: 40vh;
+		width: 100%;
+	}
+	.slide-caption {
+		position: absolute;
+		bottom: 0.5rem;
+		left: 0.5rem;
+		color: white;
+		font-size: 2.5rem;
+		text-shadow: 3px 3px 3px rgb(56, 56, 56);
+	}
+}
+
+.jumbotron {
+	h1 {
+		text-align: center;
+		padding: 0 0.5rem;
+	}
+
+	p {
+		text-align: center;
+		padding: 0 0.5rem;
+	}
+}
+
+.offer {
+	margin: 1rem;
+	position: relative;
+	.offer-title {
+		color: white;
+		text-align: center;
+	}
+	.offer-img {
+		height: 15rem;
+		width: 15rem;
+		margin: 0.5rem auto;
+	}
+	h4 {
+		display: flex !important;
+		width: fit-content;
+	}
+	ul {
+		list-style: none;
+	}
+}
+
+.link_sass {
+	color: purple;
+}
+
+.link_react {
+	color: rgb(3, 179, 179);
+}
+
+.link_php {
+	color: rgb(255, 196, 0);
+}
+
+.link_node {
+	color: rgb(0, 201, 0);
+}
+
+.link_mongo {
+	color: green;
+}
+
+.link_oracle {
+	color: orangered;
+}
+
+@media (min-width: 40rem) {
+	.slide-container {
+		margin: 0;
+		.mySlides {
+			height: 60vh;
+		}
+		.slide-caption {
+			position: absolute;
+			bottom: 0.5rem;
+			left: 0.5rem;
+			font-size: 3rem;
+		}
+	}
+	.jumbotron p {
+		text-align: left;
+	}
+}
